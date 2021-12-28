@@ -8,6 +8,7 @@
   ============================= */
 :root {
     --color-white: #FFFFFF;
+    --color-black: #000000;
 
     --font-family: 'Source Sans Pro';
     --font-size: 18px;
@@ -32,7 +33,60 @@
     justify-content: space-between;
     align-items: center;
 }
+.header .menu-icon {
+    display: none;
+    cursor: pointer;
+    padding: 1rem;
+    position: relative;
+    user-select: none;
+}
 
+.header .menu-icon .navicon {
+    background: var(--color-white);
+    display: block;
+    width: 2rem;
+    height: .2rem;
+    position: relative;
+    transition: background .2s ease-out;
+}
+
+.header .menu-icon .navicon::before,
+.header .menu-icon .navicon::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: var(--color-white);
+    transition: all .2s ease-out;
+}
+.header .menu-icon .navicon::before {
+    top: .7rem;
+}
+.header .menu-icon .navicon::after {
+    top: -.7rem;
+}
+
+@media (max-width: 480px) {
+    :root {
+        --header-padding: 2rem 0 0;
+    }
+    .header-container {
+        justify-content: center;
+        flex-direction: row-reverse;
+        flex-wrap: wrap;
+        padding: 0 1.5rem;
+    }
+    .header .menu-icon {
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-logo {
+        flex-basis: 70%;
+    }
+}
 /* Navbar
   ============================= */
 .nav {
@@ -57,4 +111,45 @@
 }
 .nav-link:hover {
     color: #FF6565;
+}
+
+@media (max-width: 480px) {
+    :root {
+        --nav-item-margin: 0;
+    }
+    .header .nav {
+        flex-direction: column;
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height .2s ease-out;
+    }
+    .navbar-menu {
+        display: none;
+        flex: 1;
+    }
+}
+
+/* menu btn */
+.header .menu-btn {
+    display: none;
+}
+.menu-btn:checked~.navbar-menu {
+    display: block;
+}
+.menu-btn:checked~.navbar-menu .nav {
+    max-height: 100%;
+    overflow: inherit;
+}
+.header .menu-btn:checked+.menu-icon .navicon {
+    background: transparent;
+}
+.header .menu-btn:checked+.menu-icon .navicon::before {
+    transform: rotate(-45deg);
+}
+.header .menu-btn:checked+.menu-icon .navicon::after {
+    transform: rotate(45deg);
+}
+.header .menu-btn:checked+.menu-icon .navicon::before,
+.header .menu-btn:checked+.menu-icon .navicon::after {
+    top: 0;
 }
