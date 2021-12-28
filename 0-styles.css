@@ -1,3 +1,11 @@
+/* Global
+  ============================= */
+  body {
+    background-image: url(images/headphones_hero_1.jpg);
+}
+
+/* Variables
+  ============================= */
 :root {
     --color-white: #FFFFFF;
 
@@ -5,30 +13,28 @@
     --font-size: 18px;
 
     --nav-item-margin: 0 0 0 2rem;
+
+    --header-padding: 4rem 0 0;
 }
 
-body {
-    background-image: url(images/headphones_hero_1.jpg);
-}
-
-
-/*Container 
-    ================*/
+/* Container
+  ============================= */
 .container {
     max-width: 1000px;
-    border: olive solid;
     margin-left: auto;
     margin-right: auto;
 }
-/* Header/Hero 
-    ================*/
+
+/* Header
+  ============================= */
 .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 /* Navbar
-====================*/
+  ============================= */
 .nav {
     display: flex;
     margin: 0;
