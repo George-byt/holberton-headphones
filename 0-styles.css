@@ -1,0 +1,96 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+html {
+    font-family: Source Sans Pro;
+}
+body {
+    margin: 0;
+}
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+header {
+    color: var(--white-color);
+}
+
+:root {
+    --font-family: Source Sans Pro;
+
+    --white-color: #FFFFFF;
+    --black-color: #000000;
+
+    --background-button: #FF6565;
+
+    --links-hover_active: #FF6565;
+    --button-hover_active: 0.9;
+}
+
+.container {
+    width: 1000px;
+}
+
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: yellow solid;
+    background-image: url(images/headphones_hero_1.jpg);
+}
+
+.header .container {
+    border: black solid;
+}
+.header-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    border: red solid;
+}
+
+
+.navbar .nav-link {
+    color: var(--white-color);
+}
+.navbar .nav-link:hover {
+    color: var(--links-hover_active);
+}
+.nav {
+    display: flex;
+}
+.navbar .nav .nav-item {
+    padding: 0 1em 0 1em;
+}
+
+
+.hero-section {
+    display: flex;
+    justify-content: center;
+}
+.hero-container {
+    display: flex;
+    flex-flow: wrap column;
+}
+.hero-container h1, span, p {
+    text-align: center;
+}
+
+
+.button {
+    cursor: pointer;
+    align-self: center;
+    color: var(--white-color);
+    background-color: #FF6565;
+    text-transform: uppercase;
+    border-radius: 2em;
+    border: none;
+    width: 10em;
+    height: 3em;
+}
+.button:hover {
+    opacity: var(--button-hover_active);
+}
