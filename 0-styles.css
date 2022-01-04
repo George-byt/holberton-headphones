@@ -1,21 +1,31 @@
 *, *::before, *::after {
     box-sizing: border-box;
 }
+
+@import 'holberton_school-icon/style.css';
+
 html {
     font-family: Source Sans Pro;
 }
+
 body {
     margin: 0;
 }
+
 a {
     text-decoration: none;
 }
+
 li {
     list-style: none;
 }
+
 header {
     color: var(--white-color);
 }
+
+/* Variables
+    =============================== */
 
 :root {
     --font-family: Source Sans Pro;
@@ -24,6 +34,7 @@ header {
     --black-color: #000000;
 
     --background-button: #FF6565;
+    --background-footer: #071629;
 
     --links-hover_active: #FF6565;
     --button-hover_active: 0.9;
@@ -31,54 +42,65 @@ header {
 
 .container {
     width: 1000px;
-}
-
-.header {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    border: yellow solid;
-    background-image: url(images/headphones_hero_1.jpg);
-}
-
-.header .container {
-    border: black solid;
-}
-.header-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
     border: red solid;
 }
 
+/* Header
+    =============================== */
+
+.header {
+    display: flex;
+    flex-direction: column;
+    background-image: url(images/headphones_hero_1.jpg);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    align-items: center;
+    border: yellow solid;
+}
+
+.header-logo img {
+    width: 100%;
+}
+
+.nav {
+    display: flex;
+}
 
 .navbar .nav-link {
     color: var(--white-color);
 }
+
 .navbar .nav-link:hover {
     color: var(--links-hover_active);
 }
-.nav {
-    display: flex;
-}
+
 .navbar .nav .nav-item {
     padding: 0 1em 0 1em;
 }
 
-
 .hero-section {
-    display: flex;
-    justify-content: center;
-}
-.hero-container {
-    display: flex;
-    flex-flow: wrap column;
-}
-.hero-container h1, span, p {
-    text-align: center;
+    margin-top: 4em;
+    margin-bottom: 4em;
 }
 
+.hero-section .container .section-header h1 {
+    margin-top: 3em;
+    margin-bottom: 0;
+}
+.hero-section .container .section-header button {
+    margin-top: 2em;
+}
+.hero-section .container .section-header button + p {
+    margin-top: 7em;
+}
 
 .button {
     cursor: pointer;
@@ -93,4 +115,176 @@ header {
 }
 .button:hover {
     opacity: var(--button-hover_active);
+}
+
+
+/* Section about us
+    =============================== */
+
+
+.section-about-us {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-about-us *{
+    color: var(--black-color);
+}
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4em;
+    margin-bottom: 4em;
+    border: yellow solid;
+}
+
+.about-container header {
+    margin: auto;
+    width: 80%;
+}
+
+.section-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+}
+
+.section-header h1 {
+    text-align: center;
+}
+
+.section-header p {
+    text-align: center;
+}
+
+.article-container {
+    display: flex;
+    margin-top: 4em;
+    margin-bottom: 5em;
+}
+
+.article-container .box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+/* Section results
+    =============================== */
+
+
+.results {
+    background-image: url(images/headphones_hero_2.jpg);
+}
+
+.results-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4em;
+    margin-bottom: 4em;
+    border: yellow solid;
+}
+
+.results *{
+    color: var(--white-color);
+}
+
+.pentagonos {
+    display: flex;
+    justify-content: space-between;
+}
+
+.results-img {
+    width: 190px;
+    height: 190px;
+    background-image: url("images/pentagone.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    text-align: center;
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px;
+    margin-bottom: 50px;
+}
+
+.results-container .section-header {
+    margin-top: 4em;
+    margin-bottom: 3em;
+}
+
+
+/* Section contact
+    =============================== */
+
+.contact {
+    display: flex;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4em;
+    margin-bottom: 4em;
+    border: yellow solid;
+}
+.contact-container h1 {
+    text-align: center;
+}
+
+.section-form {
+    display: flex;
+    align-self: center;
+    width: 400px;
+    height: 450px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.form input {
+    margin: 1em;
+    margin-bottom: 3em;
+    padding-bottom: 0.5em;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.form button {
+    margin-top: 2em;
+}
+
+::placeholder {
+    font-family: var(--font-family);
+    font-size: 18px;
+    color: var(--black-color);
+}
+
+
+/* Footer
+    =============================== */
+
+.footer {
+    background-color: var(--background-footer);
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2em;
+    color: var(--white-color);
+}
+
+.footer-container .span {
+    align-self: center;
 }
