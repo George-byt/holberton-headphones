@@ -41,10 +41,17 @@ header {
 }
 
 .container {
-    width: 1000px;
+    max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
-    border: red solid;
+}
+
+.section-header h1 {
+    text-align: center;
+}
+
+.section-header p {
+    text-align: center;
 }
 
 /* Header
@@ -54,6 +61,9 @@ header {
     display: flex;
     flex-direction: column;
     background-image: url(images/headphones_hero_1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .header-container {
@@ -63,7 +73,6 @@ header {
     margin-top: 2em;
     margin-bottom: 2em;
     align-items: center;
-    border: yellow solid;
 }
 
 .header-logo img {
@@ -91,13 +100,25 @@ header {
     margin-bottom: 4em;
 }
 
+.hero-section .container .section-header {
+    display: flex;
+    flex-direction: column;
+}
+
 .hero-section .container .section-header h1 {
-    margin-top: 3em;
+    font-size: 32px;
+    margin-top: 2em;
     margin-bottom: 0;
 }
+
+.hero-section .container .section-header span {
+    text-align: center;
+}
+
 .hero-section .container .section-header button {
     margin-top: 2em;
 }
+
 .hero-section .container .section-header button + p {
     margin-top: 7em;
 }
@@ -118,6 +139,43 @@ header {
 }
 
 
+@media (max-width: 480px) {
+    .header {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .header-container {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+    .nav {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+    .nav .nav-item {
+        margin-bottom: 1em;
+    }
+    .hero-section {
+        margin-top: 1em;
+    }
+    .hero-section .container .section-header {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        width: 70%;
+    }
+    .hero-section .container .section-header span {
+        text-align: center;    
+    }
+    .hero-section .container .section-header button + p {
+        margin-top: 5em;
+    }
+    
+}
+
 /* Section about us
     =============================== */
 
@@ -137,7 +195,6 @@ header {
     flex-direction: column;
     margin-top: 4em;
     margin-bottom: 4em;
-    border: yellow solid;
 }
 
 .about-container header {
@@ -145,18 +202,14 @@ header {
     width: 80%;
 }
 
-.section-header {
+.about-container header h1 {
+    font-size: 32px;
+}
+
+.about-container .section-header {
     display: flex;
     flex-direction: column;
     align-items: center;    
-}
-
-.section-header h1 {
-    text-align: center;
-}
-
-.section-header p {
-    text-align: center;
 }
 
 .article-container {
@@ -171,6 +224,21 @@ header {
     justify-content: center;
 }
 
+@media (max-width: 480px) {
+    .article-container {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        width: 70%;
+    }
+    .box {
+        display: flex;
+        flex-direction: column;
+    }
+    .box i {
+        margin: auto;
+    }
+}
 
 /* Section results
     =============================== */
@@ -185,7 +253,6 @@ header {
     flex-direction: column;
     margin-top: 4em;
     margin-bottom: 4em;
-    border: yellow solid;
 }
 
 .results *{
@@ -218,6 +285,28 @@ header {
     margin-bottom: 3em;
 }
 
+.results-container .section-header h1 {
+    font-size: 32px;       
+}
+@media (max-width: 480px) {
+    .results {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .results-container {
+        margin: 0;
+    }
+    .results-container .section-header {
+        width: 70%;
+        align-self: center;
+    }
+    .pentagonos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
 
 /* Section contact
     =============================== */
@@ -231,9 +320,9 @@ header {
     flex-direction: column;
     margin-top: 4em;
     margin-bottom: 4em;
-    border: yellow solid;
 }
 .contact-container h1 {
+    font-size: 32px;
     text-align: center;
 }
 
@@ -287,4 +376,11 @@ header {
 
 .footer-container .span {
     align-self: center;
+}
+
+@media (max-width: 480px) {
+    .footer-container .header-container .navbar .nav {
+        display: flex;
+        flex-direction: row;
+    }
 }
